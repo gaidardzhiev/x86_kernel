@@ -18,7 +18,7 @@ kernel.o: $(KERNEL)
 	$(CC) -c $(KERNEL) -o kernel.o $(CFLAGS)
 
 toy_os.bin: $(LD) $(BOOT) $(KERNEL)
-	$(CC) -T $(LD) $(LDFLAGS) -o toy_os.bin $(BOOT) $(KERNEL) -lgcc
+	$(CC) -T $(LD) -o toy_os.bin $(LDFLAGS) $(BOOT) $(KERNEL) -lgcc
 
 $(SHELL) != grub-file --is-x86-multiboot toy_os.bin
 $(SHELL) != mkdir -p iso/boot/grub
