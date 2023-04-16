@@ -24,3 +24,6 @@ $(SHELL) != grub-file --is-x86-multiboot toy_os.bin
 $(SHELL) != mkdir -p iso/boot/grub
 $(SHELL) != cp grub.cfg iso/boot/grub/grub.cfg
 $(SHELL) != grub-mkrescue -o toyos.iso iso
+
+clean:
+         rm -r iso/ boot.o kernel.o toyos.iso toy_os.bin
