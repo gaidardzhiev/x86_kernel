@@ -26,4 +26,4 @@ $(SHELL) != cp grub.cfg iso/boot/grub/grub.cfg
 $(SHELL) != grub-mkrescue -o toyos.iso iso
 
 clean:
-         rm -r iso/ boot.o kernel.o toyos.iso toy_os.bin
+	rm -r iso/ boot.o kernel.o toyos.iso toy_os.bin
